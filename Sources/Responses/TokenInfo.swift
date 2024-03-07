@@ -22,13 +22,13 @@ public class TokenInfo: Codable {
         case issuedTokenType
     }
 
-    var accessToken: String
-    var refreshToken: String?
-    var expiresIn: TimeInterval
-    var tokenType: String
+    public var accessToken: String
+    public var refreshToken: String?
+    public var expiresIn: TimeInterval
+    public var tokenType: String
     private var restrictedTo: [[String: AnyCodable]]?
-    let expiresAt: Date
-    var issuedTokenType: String?
+    public let expiresAt: Date
+    public var issuedTokenType: String?
 
     var restrictedToObjects: [[String: Any]] {
         guard let unwrappedRestrictedTo = restrictedTo else {
